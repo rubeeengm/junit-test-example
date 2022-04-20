@@ -1,20 +1,21 @@
 package com.proday.javatest.util;
 
+import org.junit.Assert;
+import org.junit.Test;
+
 /**
  * @author Ruben Malaga
  */
 public class StringUtilTest {
 
-    public static void main(String[] args) {
-        String result = StringUtil.repeat("hola", 3);
-        assertEquals(result, "holaholahola");
-    }
+    @Test
+    public void testRepeat() {
+        Assert.assertEquals(
+            "holaholahola", StringUtil.repeat("hola", 3)
+        );
 
-    private static void assertEquals(String actual, String expected) {
-        if (!actual.equals(expected)) {
-            throw new RuntimeException(
-                actual + " is not equal to expected " + expected
-            );
-        }
+        Assert.assertEquals(
+            "hola", StringUtil.repeat("hola", 1)
+        );
     }
 }
