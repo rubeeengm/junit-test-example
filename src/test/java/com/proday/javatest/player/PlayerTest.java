@@ -12,7 +12,7 @@ import static org.junit.Assert.assertTrue;
 public class PlayerTest {
 
     @Test
-    public void loosesWhenDiceNumberIsTooLow() {
+    public void losesWhenDiceNumberIsTooLow() {
         Dice dice = Mockito.mock(Dice.class);
         Mockito.when(dice.roll()).thenReturn(2);
 
